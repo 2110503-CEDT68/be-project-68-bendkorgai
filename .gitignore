@@ -1,8 +1,5 @@
 # ignore all node modules
 node_modules/*
 #ignore config file
-# config/config.env
+config/config.env
 
-testcase.json
-testcase2.json
-VacQ.postman_collection.json
