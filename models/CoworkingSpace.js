@@ -20,12 +20,19 @@ const CoworkingSpaceSchema = new mongoose.Schema({
   openCloseTime: {
     type: String,
     required: [true, 'Please add open-close time']
+  },
+  description: {
+    type: String,
+    required: [true, 'Please add CoworkingSpace description'],
+  },
+  imageUrl: {
+    type: String,
+    required: [true, 'Please add an image URL'],
   }
-},{
-    toJSON:{virtuals:true},
-    toObject:{virtuals:true}  
-  }
-);
+}, {
+  toJSON: { virtuals: true },
+  toObject: { virtuals: true }
+});
 
 CoworkingSpaceSchema.virtual('reservations', {
   ref: 'Reservation',
